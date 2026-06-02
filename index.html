@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Todo Planner</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- 앱 제목 -->
+    <header class="app-header">
+      <h1>Todo Planner</h1>
+      <p class="app-description">
+        주간 Todo 관리
+      </p>
+    </header>
+
+    <!-- 주간 네비게이션 -->
+    <section class="week-navigation">
+
+      <button
+        id="previousWeekButton"
+        class="week-navigation-button"
+      >
+        ◀ 이전 주
+      </button>
+
+      <h2
+        id="weekRangeText"
+        class="week-range-text"
+      >
+        2026-06-01 ~ 2026-06-07
+      </h2>
+
+      <button
+        id="nextWeekButton"
+        class="week-navigation-button"
+      >
+        다음 주 ▶
+      </button>
+
+    </section>
+
+    <!-- 주간 캘린더 -->
+    <section
+      id="weekCalendar"
+      class="week-calendar"
+    >
+      <!-- JavaScript로 생성 -->
+    </section>
+
+    <!-- 선택된 날짜 -->
+    <section class="selected-date-section">
+
+      <span class="selected-date-label">
+        선택 날짜
+      </span>
+
+      <h2
+        id="selectedDateText"
+        class="selected-date-text"
+      >
+        2026-06-02
+      </h2>
+
+    </section>
+
+    <!-- Todo 입력 -->
+    <section class="todo-input-section">
+
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="할 일을 입력하세요"
+      />
+
+      <button id="addTodoButton">
+        추가
+      </button>
+
+    </section>
+
+    <!-- 안내 메시지 -->
+    <p
+      id="messageText"
+      class="message-text"
+    >
+    </p>
+
+    <!-- 상태 필터 -->
+    <section class="filter-tabs">
+
+      <button
+        class="filter-button active"
+        data-filter="all"
+      >
+        전체
+      </button>
+
+      <button
+        class="filter-button"
+        data-filter="active"
+      >
+        진행 중
+      </button>
+
+      <button
+        class="filter-button"
+        data-filter="completed"
+      >
+        완료
+      </button>
+
+    </section>
+
+    <!-- Todo 통계 -->
+    <section class="todo-summary">
+
+      <div class="summary-card">
+        <span class="summary-title">
+          전체
+        </span>
+
+        <strong id="totalTodoCount">
+          0
+        </strong>
+      </div>
+
+      <div class="summary-card">
+        <span class="summary-title">
+          진행 중
+        </span>
+
+        <strong id="activeTodoCount">
+          0
+        </strong>
+      </div>
+
+      <div class="summary-card">
+        <span class="summary-title">
+          완료
+        </span>
+
+        <strong id="completedTodoCount">
+          0
+        </strong>
+      </div>
+
+    </section>
+
+    <!-- Todo 목록 -->
+    <ul
+      id="todoList"
+      class="todo-list"
+    >
+    </ul>
+
+    <!-- 빈 상태 -->
+    <div
+      id="emptyState"
+      class="empty-state"
+    >
+      <p>
+        선택한 날짜의 Todo가 없습니다.
+      </p>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

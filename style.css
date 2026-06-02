@@ -1,0 +1,369 @@
+/* =========================
+   Reset
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   Base
+========================= */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   Header
+========================= */
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  color: #672be0;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.app-description {
+  color: #777;
+  font-size: 14px;
+}
+
+/* =========================
+   Week Navigation
+========================= */
+.week-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.week-navigation-button {
+  border: none;
+  background-color: #672be0;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.week-navigation-button:hover {
+  opacity: 0.9;
+}
+
+.week-range-text {
+  color: #672be0;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* =========================
+   Week Calendar
+========================= */
+.week-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.week-day-card {
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 14px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.week-day-card:hover {
+  transform: translateY(-2px);
+  border-color: #672be0;
+}
+
+.week-day-name {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.week-day-date {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.todo-count {
+  display: inline-block;
+  background-color: #f3eeff;
+  color: #672be0;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* 오늘 */
+.today {
+  border: 2px solid #672be0;
+}
+
+/* 선택된 날짜 */
+.selected-day {
+  background-color: #672be0;
+  color: white;
+}
+
+.selected-day .week-day-name,
+.selected-day .week-day-date {
+  color: white;
+}
+
+.selected-day .todo-count {
+  background-color: white;
+  color: #672be0;
+}
+
+/* =========================
+   Selected Date
+========================= */
+.selected-date-section {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.selected-date-label {
+  display: block;
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.selected-date-text {
+  color: #672be0;
+  font-size: 24px;
+}
+
+/* =========================
+   Input Area
+========================= */
+.todo-input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+#todoInput {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+}
+
+#todoInput:focus {
+  outline: none;
+  border-color: #672be0;
+}
+
+#addTodoButton {
+  border: none;
+  background-color: #672be0;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#addTodoButton:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   Message
+========================= */
+.message-text {
+  min-height: 24px;
+  color: #e74c3c;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   Filter Tabs
+========================= */
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.filter-button {
+  border: 1px solid #672be0;
+  background-color: white;
+  color: #672be0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-button:hover {
+  background-color: #f3eeff;
+}
+
+.filter-button.active {
+  background-color: #672be0;
+  color: white;
+}
+
+/* =========================
+   Summary
+========================= */
+.todo-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  background-color: #faf8ff;
+  border: 1px solid #e7dcff;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.summary-title {
+  display: block;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.summary-card strong {
+  color: #672be0;
+  font-size: 22px;
+}
+
+/* =========================
+   Todo List
+========================= */
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.todo-content {
+  flex: 1;
+  word-break: break-word;
+  font-size: 15px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* =========================
+   Buttons
+========================= */
+.action-button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.complete-button {
+  background-color: #2ecc71;
+}
+
+.edit-button {
+  background-color: #f39c12;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+/* =========================
+   Empty State
+========================= */
+.empty-state {
+  display: none;
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .week-calendar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .todo-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .week-navigation {
+    flex-direction: column;
+  }
+
+  .todo-input-section {
+    flex-direction: column;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
