@@ -1,0 +1,57 @@
+:root {
+  /* kakao tech campus palette */
+  --blue: #2b4dff;
+  --blue-deep: #1a2db0;
+  --navy: #16236e;
+  --yellow: #ffe14c;
+  --yellow-soft: #fff4ad;
+  --cream: #eef1ff;
+  --white: #ffffff;
+  --ink: #2a2f55;
+  --coral: #ff6b81;
+
+  --display: 'Jua', 'Apple SD Gothic Neo', system-ui, sans-serif;
+  --round: 'Gaegu', 'Apple SD Gothic Neo', system-ui, sans-serif;
+  --sans:
+    'Apple SD Gothic Neo', 'Pretendard', system-ui, 'Segoe UI', Roboto,
+    sans-serif;
+
+  font: 17px/150% var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* 살짝 점박이 배경으로 키치한 느낌 */
+  background-color: var(--cream);
+  background-image: radial-gradient(
+    rgba(43, 77, 255, 0.08) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 22px 22px;
+  min-height: 100svh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+}
+
+h1,
+h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  color: var(--navy);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
